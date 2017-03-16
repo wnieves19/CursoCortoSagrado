@@ -11,13 +11,13 @@
     tools:context="com.optivon.calculator.MainActivity">
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:id="@+id/textView"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="155dp" />
+        android:layout_marginTop="113dp"
+        android:text="Total: "
+        android:layout_below="@+id/firstNumber"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:text="+"
@@ -32,12 +32,13 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="number"
         android:hint="Segundo Numero"
         android:ems="10"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="18dp"
         android:id="@+id/secondNumber"
         android:layout_above="@+id/sumar"
+        android:layout_alignRight="@+id/firstNumber"
+        android:layout_alignEnd="@+id/firstNumber"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -49,6 +50,6 @@
         android:ems="10"
         android:id="@+id/firstNumber"
         android:layout_alignParentTop="true"
-        android:layout_alignRight="@+id/textView"
-        android:layout_alignEnd="@+id/textView" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 </RelativeLayout>
