@@ -14,10 +14,13 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="113dp"
+        android:layout_marginTop="115dp"
         android:text="Total: "
         android:layout_below="@+id/firstNumber"
-        android:layout_centerHorizontal="true" />
+        android:layout_toRightOf="@+id/sumar"
+        android:layout_toEndOf="@+id/sumar"
+        android:layout_marginLeft="101dp"
+        android:layout_marginStart="101dp" />
 
     <Button
         android:text="+"
@@ -36,6 +39,7 @@
         android:ems="10"
         android:layout_marginBottom="18dp"
         android:id="@+id/secondNumber"
+        android:inputType="number"
         android:layout_above="@+id/sumar"
         android:layout_alignRight="@+id/firstNumber"
         android:layout_alignEnd="@+id/firstNumber"
