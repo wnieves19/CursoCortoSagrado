@@ -1,5 +1,6 @@
 package com.optivon.lista;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -18,9 +19,9 @@ public class MainActivity extends AppCompatActivity {
 
         lista = (ListView) findViewById(R.id.list_view);
 
-        final String[] fruits = {"apples", "guava", "mango", "pinneaple", "strawberry", "peach"};
+        final String[] fruits = {"apple", "mango", "pinneaple", "strawberry", "peach"};
 
-        ArrayAdapter<String> itemsAdapter = new ArrayAdapter<String>(this, R.layout.layout_lista, fruits);
+        ArrayAdapter<String> itemsAdapter = new ArrayAdapter<>(this, R.layout.layout_lista, fruits);
 
         lista.setAdapter(itemsAdapter);
 
@@ -29,9 +30,26 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Toast.makeText(MainActivity.this, fruits[i] , Toast.LENGTH_SHORT).show();
 
+                Intent intent = new Intent(MainActivity.this, PictureActivity.class);
 
+                intent.putExtra("fruit_name", fruits[i]);
+
+                startActivity(intent);
             }
         });
 
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
